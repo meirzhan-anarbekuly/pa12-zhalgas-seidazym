@@ -1,38 +1,3 @@
-public class Problem_A{
-    public static void main(String[] args) {
-        MyLL<String> countries = new MyLL<>();
-        System.out.println("countries.empty(): " + countries.isEmpty());
-        System.out.println("Add first: 'China'");countries.addFirst("China");
-        System.out.println("Add first: 'Germany");countries.addFirst("Germany");
-        System.out.println("countries.getFirst(): " + countries.getFirst());
-        System.out.println("Add first: 'Kazakhstan'");countries.addFirst("Kazakhstan");
-        countries.print();
-        System.out.println("countries.empty(): " + countries.isEmpty());
-        System.out.println("countries.size(): " + countries.size());
-
-        System.out.println("Add last: 'USA'");countries.addLast("USA");
-        countries.print();
-        System.out.println("countries.getLast(): " + countries.getLast());
-
-        System.out.println("Add index-2: 'Albania'");countries.add(2, "Albania");
-        countries.print();
-        System.out.println("countries.get(2):" + countries.get(2));
-
-        System.out.println("countries.getFirst(): " + countries.getFirst());
-        System.out.println("Remove first:");
-        countries.removeFirst();
-        countries.print();
-
-        System.out.println("Remove last:");
-        countries.removeLast();
-        countries.print();
-
-        System.out.println("Remove index - 1 element:");
-        countries.remove(1);
-        countries.print();
-    }
-}
-
 class Node<E> {
     E element;
     Node<E> next;
@@ -196,5 +161,33 @@ class MyLL<E> {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }
+    }
+
+    public static void main(String[] args) {
+        MyLL<String> countries = new MyLL<>();
+        System.out.println("countries.empty(): " + countries.isEmpty());
+        System.out.println("Add first: 'China'");countries.addFirst("China");
+        System.out.println("Add first: 'Germany");countries.addFirst("Germany");
+        System.out.println("countries.getFirst(): " + countries.getFirst());
+        System.out.println("Add first: 'Kazakhstan'");countries.addFirst("Kazakhstan");
+        countries.print();
+        System.out.println("countries.empty(): " + countries.isEmpty());
+        System.out.println("countries.size(): " + countries.size());
+        System.out.println("Add last: 'USA'");countries.addLast("USA");
+        countries.print();
+        System.out.println("countries.getLast(): " + countries.getLast());
+        System.out.println("Add index-2: 'Albania'");countries.add(2, "Albania");
+        countries.print();
+        System.out.println("countries.get(2):" + countries.get(2));
+        System.out.println("countries.getFirst(): " + countries.getFirst());
+        System.out.println("Remove first:");
+        countries.removeFirst();
+        countries.print();
+        System.out.println("Remove last:");
+        countries.removeLast();
+        countries.print();
+        System.out.println("Remove index - 1 element:");
+        countries.remove(1);
+        countries.print();
     }
 }
